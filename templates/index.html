@@ -11,15 +11,16 @@
     <div class="container">
         <h1>Chào mừng đến với trang web của tôi</h1>
         <p>Khám phá các nội dung thú vị và tìm hiểu thêm về công nghệ với chúng tôi. Cảm ơn bạn đã ghé thăm!</p>
-        <!-- Thêm input để nhập số lượng Producer -->
-        <div>
-        </div>
         <button onclick="start()">Bắt đầu khám phá</button>
     </div>
     <div id="status-container">
+        <h2>Trạng thái:</h2>
         <div id="status"></div>
     </div>
-    <div id="result"></div>
+    <div id="result">
+        <h2>Kết quả:</h2>
+        <div id="output"></div>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
-<script src="{{ url_for('static', filename='app.js') }}"></script>
 </html>
