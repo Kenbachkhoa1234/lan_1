@@ -1,4 +1,4 @@
-var socket = io.connect('');
+var socket = io.connect('https://easy-game-qjun.vercel.app');
 
 socket.on('update', function(data) {
     var resultDiv = document.getElementById('result');
