@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producer-Consumer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.5.1/dist/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chào mừng đến với trang web của tôi</h1>
+        <p>Khám phá các nội dung thú vị và tìm hiểu thêm về công nghệ với chúng tôi. Cảm ơn bạn đã ghé thăm!</p>
+        <!-- Thêm input để nhập số lượng Producer -->
+        <div>
+            <label for="numProducers">Số lượng Producer:</label>
+            <input type="number" id="numProducers" min="1" value="1">
+        </div>
+        <button onclick="start()">Bắt đầu khám phá</button>
+    </div>
+    <div id="status-container">
+        <div id="status"></div>
+    </div>
+    <div id="result"></div>
+</body>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</html>
