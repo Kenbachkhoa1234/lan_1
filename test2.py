@@ -23,9 +23,8 @@ from flask_cors import CORS
 
 # Cài đặt Flask và SocketIO
 app = Flask(__name__)
-socketio = SocketIO(app, threaded=True)
-
-CORS(app, resources={r"/*": {"origins": "https://btaplon-zwj7.vercel.app"}})
+CORS(app, resources={r"/*": {"origins": "*"}})  # Cho phép tất cả các nguồn
+socketio = SocketIO(app, cors_allowed_origins='*', threaded=True)
 products = ["Bánh", "Kẹo", "Nước", "Trà"]
 # Producer class
 class Producer(threading.Thread):
