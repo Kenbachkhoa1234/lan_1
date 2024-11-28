@@ -1,4 +1,4 @@
-var socket = io.connect('http://127.0.0.1:5000');
+var socket = io.connect('https://easy-game-8h2w.vercel.app/');
 
 socket.on('update', function(data) {
     var resultDiv = document.getElementById('result');
