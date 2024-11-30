@@ -71,11 +71,6 @@ def start_threads():
 
     nha_san_xuat_thread.start()
     khach_hang_thread.start()
-
-    # Đảm bảo các luồng đã hoàn thành
-    nha_san_xuat_thread.join()
-    khach_hang_thread.join()
-
     return jsonify({"status": "completed", "produced_items": so_san_pham_da_san_xuat})
 
 if __name__ == '__main__':
