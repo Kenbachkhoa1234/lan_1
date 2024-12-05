@@ -81,4 +81,4 @@ def start_threads():
     return jsonify({"status": "completed", "produced_items": so_san_pham_da_san_xuat})
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=True, ping_timeout=60)
