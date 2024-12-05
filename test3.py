@@ -21,7 +21,8 @@ not_empty = threading.Condition(buffer_lock)
 
 # Khởi tạo Flask và SocketIO
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Cho phép tất cả các nguồn
+CORS(app, resources={r"/socket.io/*": {"origins": "*"}})
+# Cho phép tất cả các nguồn
 socketio = SocketIO(app, cors_allowed_origins='*', threaded=True)
 
 # Danh sách sản phẩm để sản xuất

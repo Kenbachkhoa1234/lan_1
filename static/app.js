@@ -1,4 +1,5 @@
-var socket = io.connect('');
+var socket = io.connect('https://lan-1-seven.vercel.app');
+
 socket.on('update', function(data) {
     var resultDiv = document.getElementById('result');
     if (data.type === 'produced') {
