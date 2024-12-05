@@ -5,7 +5,8 @@ from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from flask_cors import CORS
 #troi oi
-# Kích thước buffer cố định
+#lan1
+#Kích thước buffer cố định
 KICH_THUOC_BUFFER = 5
 buffer = []
 
