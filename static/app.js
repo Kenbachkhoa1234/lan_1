@@ -1,5 +1,4 @@
-var socket = io.connect('https://troi-oi.vercel.app/');
-var socket = io();
+var socket = io.connect('');
 socket.on('update', function(data) {
     var resultDiv = document.getElementById('result');
     if (data.type === 'produced') {
