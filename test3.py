@@ -5,7 +5,7 @@ from flask import Flask, render_template, jsonify
 from flask_socketio import SocketIO
 from flask_cors import CORS
 #troi oi
-#lan2
+#lan1
 #Kích thước buffer cố định
 KICH_THUOC_BUFFER = 5
 buffer = []
@@ -21,8 +21,7 @@ not_empty = threading.Condition(buffer_lock)
 
 # Khởi tạo Flask và SocketIO
 app = Flask(__name__)
-CORS(app, resources={r"/socket.io/*": {"origins": "*"}})
-# Cho phép tất cả các nguồn
+CORS(app, resources={r"/*": {"origins": "*"}})  # Cho phép tất cả các nguồn
 socketio = SocketIO(app, cors_allowed_origins='*', threaded=True)
 
 # Danh sách sản phẩm để sản xuất
@@ -81,4 +80,4 @@ def start_threads():
     return jsonify({"status": "completed", "produced_items": so_san_pham_da_san_xuat})
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True,)
+    socketio.run(app, debug=True)

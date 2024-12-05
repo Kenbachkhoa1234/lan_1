@@ -1,7 +1,4 @@
-var socket = io.connect('https://lan-1-seven.vercel.app/', {
-    transports: ['polling']
-});
-
+var socket = io.connect('http://127.0.0.1:5000/');
 socket.on('update', function(data) {
     var resultDiv = document.getElementById('result');
     if (data.type === 'produced') {
