@@ -21,7 +21,7 @@ not_empty = threading.Condition(buffer_lock)
 
 # Khởi tạo Flask và SocketIO
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/socket.io/*": {"origins": "*"}})
 # Cho phép tất cả các nguồn
 socketio = SocketIO(app, cors_allowed_origins='*', threaded=True)
 
@@ -81,4 +81,4 @@ def start_threads():
     return jsonify({"status": "completed", "produced_items": so_san_pham_da_san_xuat})
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=True,)
